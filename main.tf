@@ -11,7 +11,7 @@ resource "newrelic_nrql_alert_condition" "foo" {
   type                         = "baseline"
   account_id                   = 3627500
   name                         = "${lookup(var.condition_name_querydata[count.index],"name")}"
-  policy_id                    = module.policy_child_module.policy_id
+  policy_id                    = newrelic_alert_policy.main_policy.id
    
   description                  = "Alert when transactions are taking too long"
   enabled                      = true
