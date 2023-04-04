@@ -1,6 +1,6 @@
-data "newrelic_alert_policy" "foo" {
-  name = "data_source_policy"
-}
+# data "newrelic_alert_policy" "foo" {
+#   name = "data_source_policy"
+# }
 
 
 resource "newrelic_nrql_alert_condition" "foo" {
