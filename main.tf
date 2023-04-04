@@ -11,8 +11,7 @@ resource "newrelic_nrql_alert_condition" "foo" {
   type                         = "baseline"
   account_id                   = 3627500
   name                         = "${lookup(var.condition_name_querydata[count.index],"name")}"
-  policy_id                    = "4125198"
-   
+  policy_id                    = var.policy_id
   description                  = "Alert when transactions are taking too long"
   enabled                      = true
   runbook_url                  = "https://www.example.com"

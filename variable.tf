@@ -10,6 +10,10 @@ variable "condition_name_querydata" {
   type=list(any)
 }
 
+variable "policy_id" {
+  type = any
+  }
+
 # variable "critical_threshold_values" {
 #   type=list(object({
    
